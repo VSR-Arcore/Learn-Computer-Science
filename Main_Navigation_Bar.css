@@ -1,0 +1,477 @@
+header {
+  width: 100vw;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#Main_Navigation_Bar {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+#MNB_LogoBox {
+  width: 8%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#MNB_TitleBox {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#MNB_TitleBox > span {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  color: blue;
+  font-size: 1.2em;
+  font-weight: 700;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#MNB_TitleBox > span:nth-child(2)::after {
+  content: "";
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  top: 110%;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+#MNB_MenuBox {
+  width: 57%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.MNB_Menu {
+  width: 25%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.MNB_Menu:first-child {
+  justify-content: flex-end;
+  padding: 0px 15px 0px 0px;
+}
+
+.MNB_Menu:first-child > span {
+  user-select: none;
+  position: relative;
+  padding: 0px 10px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.MNB_Menu:first-child > span:hover {
+  background-color: #0084ff20;
+}
+
+.MNB_Menu:first-child > span::after {
+  content: "";
+  background-color: #0084ff;
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  top: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.MNB_Menu:first-child > span:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.MNB_Menu > span:first-child {
+  height: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  color: #0084ff;
+}
+
+.MNB_DropdownIcon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  color: #0084ff;
+  transition: 0.3s;
+  user-select: none;
+  transform: translate(0px, 3px);
+}
+
+/* Turn on in computer */
+/* .MNB_Menu:hover .MNB_DropdownIcon {
+  transform: translate(0px, 5px); 
+} */
+
+.MNB_Menu:active .MNB_DropdownIcon {
+  transform: translate(0px, 5px);
+}
+
+.MNB_SubMenuBox {
+  background-color: #0084ff;
+  position: absolute;
+  top: 100%;
+  left: -25%;
+  visibility: hidden;
+  flex-flow: row wrap;
+  width: max-content;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+
+.MNB_SubMenuMain {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 0px;
+}
+
+.MNB_SubMenuMain > a {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: monospace;
+  text-decoration: none;
+  color: yellow;
+}
+
+.MNB_SubMenuP {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  gap: 5px;
+  padding: 0px 10px;
+}
+
+.MNB_SubMenuP > li {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.MNB_SubMenuP > li > a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  font-family: monospace;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.MNB_SubMenuP > li > a:hover {
+  color: yellow;
+}
+
+.MNB_SubMenuP > li > a:active {
+  text-decoration: underline;
+}
+
+.MNB_SubMenuP > li:first-child {
+  align-items: center;
+  color: lightgreen;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  justify-content: center;
+  margin: 0px 0px 2px 0px;
+}
+
+.MNB_SubMenuP2 {
+  margin: 10px 0px 0px 0px;
+}
+
+.MNB_SubMenuLinkIcon {
+  font-size: 1em;
+}
+
+#MNB_ButtonBox {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#MNB_ButtonBox > button {
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#MNB_ButtonBox > button:hover {
+  background-color: #0084ff;
+}
+
+#MNB_ButtonBox > button:active {
+  background-color: #0055ff;
+}
+
+#MNB_MenuButtonBox {
+  display: none;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.Menu_Bar1, .Menu_Bar2, .Menu_Bar3 {
+  display: bolck;
+  width: 30px;
+  height: 4px;
+  background-color: #0084ff;
+  margin: 2.5px 0;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.AnimateMenu .Menu_Bar1 {
+  transform: translate(0px, 9px)
+  rotate(405deg);
+}
+
+.AnimateMenu .Menu_Bar2 {
+  opacity: 0;
+}
+
+.AnimateMenu .Menu_Bar3 {
+  transform: translate(0px, -9px)
+  rotate(315deg);
+}
+
+#MNB_SideNavigation {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute; /* Make it fixed relative to the viewport */
+  top: 100%;
+  right: 0;
+  width: 0; /* Start with zero width */
+  height: 86vh;
+  background-color: #0084ff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: width 0.3s ease; /* Smooth transition for width */
+  z-index: 1000;
+}
+
+/* When the menu is active */
+.MenuOpen #MNB_SideNavigation {
+  width: 75vw; /* Expand to full width when active */
+}
+
+#MNBSN_Overlay {
+  position: fixed; /* Cover the whole screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: none; /* Hide by default */
+  z-index: 999; /* Make sure it covers other content */
+}
+
+/* When the sidebar is active */
+.MenuOpen #MNBSN_Overlay {
+  display: block; /* Show the overlay */
+}
+
+#MNBSN_MenuBox {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
+
+.MNBSN_Menu {
+  width: 100%;
+}
+
+.MNBSN_Menu:first-child {
+  width: 100%;
+  display: flex;
+  border: none;
+}
+
+.MNBSN_Menu:first-child > a {
+  width: 100%;
+  background: #009dff;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 0px 10px 10px;
+}
+
+.MNBSN_SubMenuBoxToggler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #0055ff;
+  padding: 10px 0px 10px 10px;
+}
+
+.MNBSN_SubMenuBoxToggler > span {
+  color: white;
+}
+
+.MNBSN_SubMenuBox {
+  display: none;
+}
+
+.MNBSN_SubMenuBox.MNBSN_SubMenuBoxActive {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%; 
+  height: max-content;
+  padding: 10px;
+  visibility: visible;
+}
+
+.MNBSN_SubMenuBox > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: yellow;
+  width: 100%;
+}
+
+.MNBSN_SubMenuP {
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+}
+
+.MNBSN_SubMenuP > li:first-child {
+  color: lightgreen;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 10px 0px;
+}
+
+.MNBSN_SubMenuP > li {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.MNBSN_SubMenuP > li > a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#MNBSN_ButtonBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 0px 50px 0px;
+}
+
+#MNBSN_ButtonBox > button {
+  border: none;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  font-weight: 600;
+  width: 80%;
+  padding: 10px 0px;
+  transition: 0.3s;
+}
+
+#MNBSN_ButtonBox > button:active {
+  background-color: #0055ff;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 700px) {
+  header {
+    height: 70px;
+  }
+
+  #Main_Navigation_Bar {
+    width: 100%;
+  }
+  
+  #MNB_MenuBox, #MNB_ButtonBox {
+    display: none;
+  }
+
+  #MNB_LogoBox {
+    width: 20%;
+  }
+  
+  #MNB_TitleBox {
+    width: 55%;
+  }
+
+  #MNB_TitleBox > span {
+    padding: 0px 15px 0px 0px;
+  }
+
+  #MNB_TitleBox > span:nth-child(2)::after {
+    width: 90%;
+  }
+
+  #MNB_MenuButtonBox {
+    display: flex;
+    width: 10%;
+    height: 100%;
+  }
+}
